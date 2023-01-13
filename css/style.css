@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 100%;
 }
 
 body {
@@ -107,11 +108,6 @@ nav {
 ------------ Player section styles ------------ 
 //////////////////////////////////////////////*/
 
-
-/* .top-players {
-    margin: 30px;
-} */
-
 .top-players {
     margin-bottom: 30px;
 }
@@ -121,7 +117,6 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
     padding-top: 30px;
-
 }
 
 .player {
@@ -202,7 +197,7 @@ nav {
 
 
 .course {
-    width: 240px;
+    width: 86%;
     padding: 15px;
     background: #FFFFFF;
     border-radius: 5px;
@@ -266,5 +261,61 @@ nav {
     font-size: 14px;
     font-weight: 600;
     color: #FF4A60;
+
+}
+
+/* ////////////////////////////////////////////
+------------ Media Queries ------------ 
+//////////////////////////////////////////////*/
+
+@media screen and (max-width:688px) {
+
+
+    .container {
+        text-align: center;
+        /* width: 100%; */
+        /* padding: 0; */
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+    .player-name {
+        margin-top: 16px;
+    }
+
+}
+
+@media screen and (min-width:689px) and (max-width:992px) {
+    .container {
+        /* width: 100%; */
+        text-align: center;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+    .player-name {
+        margin-top: 16px;
+    }
 
 }
